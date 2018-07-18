@@ -1,0 +1,547 @@
+/**
+ * @class CSS.Mixins
+ * Biblioteka mixinów.
+ */
+/**
+ * Zeruje pozycjonowanie elementu.
+ */
+/**
+ * Blokuje możliwość zmiany rozmiaru pola tekstowego przez użytkownika.
+ * @param {length} width
+ * @param {length} height
+ */
+/**
+ * Przelicza piksele na em'y'
+ * @method px2em
+ * @param {length} value Wartość do przeliczenia w pikselach.
+ * @param {length} context Parametr opcjonalny.
+ * @param {length} base Parametr opcjonalny.
+ */
+/**
+ * Formatowanie listy.
+ * @param {length} margin Default: 0
+ * @param {length} padding Default: 0
+ * @param {string} type Default: none
+ */
+/**
+ * Oblicza procent.
+ * @method fpercentage
+ * @param {number} quantity
+ * @param {percentage} percent
+ */
+/**
+ * Serif
+ */
+/**
+ * Sans-Serif
+ */
+/**
+ * Monospace
+ */
+/**
+* Cropp fonts
+*/
+@font-face {
+  font-family: "benderbold";
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-bold-webfont.eot');
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Bender/jovanny_lemonad_-_bender-bold-webfont.svg') format('svg'), url('fonts/Bender/jovanny_lemonad_-_bender-bold-webfont.woff') format('woff'), url('fonts/Bender/jovanny_lemonad_-_bender-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "benderblack";
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-black-webfont.eot');
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-black-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Bender/jovanny_lemonad_-_bender-black-webfont.svg') format('svg'), url('fonts/Bender/jovanny_lemonad_-_bender-black-webfont.woff') format('woff'), url('fonts/Bender/jovanny_lemonad_-_bender-black-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "benderlight";
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-light-webfont.eot');
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Bender/jovanny_lemonad_-_bender-light-webfont.svg') format('svg'), url('fonts/Bender/jovanny_lemonad_-_bender-light-webfont.woff') format('woff'), url('fonts/Bender/jovanny_lemonad_-_bender-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "benderitalic";
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-italic-webfont.eot');
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Bender/jovanny_lemonad_-_bender-italic-webfont.svg') format('svg'), url('fonts/Bender/jovanny_lemonad_-_bender-italic-webfont.woff') format('woff'), url('fonts/Bender/jovanny_lemonad_-_bender-italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "benderregular";
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-webfont.eot');
+  src: url('fonts/Bender/jovanny_lemonad_-_bender-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Bender/jovanny_lemonad_-_bender-webfont.svg') format('svg'), url('fonts/Bender/jovanny_lemonad_-_bender-webfont.woff') format('woff'), url('fonts/Bender/jovanny_lemonad_-_bender-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
+/**
+ * Zmienne reprezentujące kolory.
+ * @class CSS.Colors
+ * @readonly
+ */
+/*$clCroppGreen: #01af44;*/
+/* TODO: Dominik, dorób brakujące odcienie szarości. */
+/**
+ *
+ */
+/* line 9, ../scss/print.scss */
+body {
+  width: 900px; }
+/* line 12, ../scss/print.scss */
+body #wrapper {
+  width: 900px; }
+/* line 15, ../scss/print.scss */
+body #wrapper .cropp-logo-print {
+  margin-bottom: 20px; }
+/* line 22, ../scss/print.scss */
+body #wrapper .orders-history table tr.odd, body #wrapper .orders-history table tr.even {
+  display: none; }
+/* line 26, ../scss/print.scss */
+body #wrapper .orders-history table tr.odd.open-row, body #wrapper .orders-history table tr.even.open-row {
+  display: table-row; }
+/* line 30, ../scss/print.scss */
+body #wrapper .orders-history table .table-responsive {
+  background-color: #f9f9f9;
+  text-align: right; }
+
+/* line 41, ../scss/print.scss */
+body.page-product-detail a:after {
+  content: " (" attr(href) ") ";
+  font-size: 0;
+  display: none; }
+/* line 48, ../scss/print.scss */
+body.page-product-detail #wrapper .main-nav-brand {
+  float: left;
+  width: 138px;
+  height: 66px; }
+/* line 54, ../scss/print.scss */
+body.page-product-detail #wrapper .main-nav-brand img {
+  width: 138px;
+  height: 66px; }
+/* line 63, ../scss/print.scss */
+body.page-product-detail .product-details {
+  float: left;
+  margin: 0;
+  width: 48% !important;
+  padding: 0; }
+/* line 69, ../scss/print.scss */
+body.page-product-detail .product-details h1 {
+  font-size: 25px; }
+/* line 73, ../scss/print.scss */
+body.page-product-detail .product-details h4 {
+  font-size: 15px;
+  text-transform: uppercase; }
+/* line 78, ../scss/print.scss */
+body.page-product-detail .product-details .cropp-logo-print {
+  display: block;
+  margin-bottom: 30px; }
+/* line 84, ../scss/print.scss */
+body.page-product-detail .product-details .price-box span {
+  color: #00af43 !important;
+  width: 100%;
+  display: block; }
+/* line 89, ../scss/print.scss */
+body.page-product-detail .product-details .price-box span.old-price {
+  color: #898989 !important;
+  text-decoration: line-through; }
+/* line 92, ../scss/print.scss */
+body.page-product-detail .product-details .price-box span.old-price sup {
+  color: #898989 !important; }
+/* line 97, ../scss/print.scss */
+body.page-product-detail .product-details .price-box span.special-price {
+  font-size: 25px;
+  clear: left;
+  color: #cb0000 !important; }
+/* line 101, ../scss/print.scss */
+body.page-product-detail .product-details .price-box span.special-price sup {
+  color: #cb0000 !important; }
+/* line 106, ../scss/print.scss */
+body.page-product-detail .product-details .price-box span.index {
+  color: #898989 !important;
+  font-size: 12px;
+  display: block; }
+/* line 112, ../scss/print.scss */
+body.page-product-detail .product-details .price-box span sup {
+  color: #00af43 !important; }
+/* line 118, ../scss/print.scss */
+body.page-product-detail .product-details .product-options > div.size-box label {
+  background-color: #eaeaea !important;
+  margin-right: 5px;
+  border: none !important;
+  text-align: center;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  font-weight: normal; }
+/* line 130, ../scss/print.scss */
+body.page-product-detail .product-details .product-options .product-colors ul {
+  list-style-type: none !important;
+  float: left;
+  margin-left: 0;
+  padding-left: 0; }
+/* line 135, ../scss/print.scss */
+body.page-product-detail .product-details .product-options .product-colors ul li {
+  float: left;
+  margin-right: 5px;
+  height: 30px;
+  width: 30px; }
+/* line 141, ../scss/print.scss */
+body.page-product-detail .product-details .product-options .product-colors ul li button {
+  border: 2px solid #737373;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+/* line 147, ../scss/print.scss */
+body.page-product-detail .product-details .product-options .product-colors ul li button img {
+  height: 100%;
+  width: 100%;
+  margin: 0; }
+/* line 152, ../scss/print.scss */
+body.page-product-detail .product-details .product-options .product-colors ul li button span {
+  display: none !important; }
+/* line 160, ../scss/print.scss */
+body.page-product-detail .product-details .product-options h4 {
+  color: #898989 !important; }
+/* line 165, ../scss/print.scss */
+body.page-product-detail .product-gallery {
+  float: right;
+  margin: 0;
+  width: 50% !important;
+  padding: 0; }
+
+/*
+ *
+ * Wydruk zamówienia z historii
+ *
+ */
+/* line 188, ../scss/print.scss */
+.customer-account-page, .customer-account-page #wrapper, .customer-account-page #wrapper .container, .customer-account-page #wrapper .container section.content {
+  width: 100%; }
+
+/* line 193, ../scss/print.scss */
+#myorders {
+  margin-left: 20px;
+  font-size: 13px;
+  font-family: 'benderbold';
+  border-left: none;
+  border-right: none;
+  width: 100% !important; }
+/* line 200, ../scss/print.scss */
+#myorders a:after {
+  content: ''; }
+/* line 204, ../scss/print.scss */
+#myorders .details tr th, #myorders .cel2 .index a {
+  color: #848484 !important; }
+/* line 207, ../scss/print.scss */
+#myorders .price {
+  font-family: 'benderbold' !important; }
+/* line 210, ../scss/print.scss */
+#myorders .cel2 {
+  width: auto !important; }
+/* line 213, ../scss/print.scss */
+#myorders .cel3 {
+  width: 137px !important; }
+/* line 216, ../scss/print.scss */
+#myorders tbody .cel4 {
+  width: 250px !important; }
+/* line 221, ../scss/print.scss */
+#myorders tbody .cel4 .cel2.summary .price, #myorders tbody .cel4 .cel2.summary .price > *, #myorders tbody .cel4 .price, #myorders tbody .cel4 .price > * {
+  color: #00af43 !important; }
+/* line 228, ../scss/print.scss */
+#myorders tbody .cel4 .cel2 .price, #myorders tbody .cel4 .cel2 .price > * {
+  color: black !important; }
+/* line 233, ../scss/print.scss */
+#myorders tbody .cel4 .name {
+  text-align: right; }
+/* line 236, ../scss/print.scss */
+#myorders tbody .cel4 table {
+  border: 0 !important; }
+/* line 240, ../scss/print.scss */
+#myorders tbody .cel4 table tr, #myorders tbody .cel4 table tr td {
+  height: 30px !important;
+  vertical-align: middle; }
+/* line 244, ../scss/print.scss */
+#myorders tbody .cel4 table tr td {
+  width: 50% !important; }
+/* line 249, ../scss/print.scss */
+#myorders tbody .cel4 .pull-left {
+  width: auto !important; }
+/* line 251, ../scss/print.scss */
+#myorders tbody .cel4 .pull-left .btn {
+  padding: 0 !important; }
+/* line 255, ../scss/print.scss */
+#myorders tbody .cel4 .right-col {
+  overflow: hidden;
+  min-width: 150px; }
+/* line 261, ../scss/print.scss */
+#myorders table .cel4 {
+  padding-left: 0 !important;
+  width: 300px !important; }
+/* line 267, ../scss/print.scss */
+#myorders > thead tr {
+  background-color: #eeeeee; }
+/* line 270, ../scss/print.scss */
+#myorders > thead tr th {
+  font-weight: normal;
+  color: #848484;
+  border-bottom: none;
+  text-transform: uppercase;
+  padding: 5px 20px 5px 5px; }
+/* line 277, ../scss/print.scss */
+#myorders > thead tr th.cel1 {
+  width: 10%; }
+/* line 281, ../scss/print.scss */
+#myorders > thead tr th.cel2 {
+  width: 10%; }
+/* line 285, ../scss/print.scss */
+#myorders > thead tr th.cel3 {
+  width: 35%; }
+/* line 289, ../scss/print.scss */
+#myorders > thead tr th.cel4 {
+  width: 15%;
+  padding-right: 30px; }
+/* line 294, ../scss/print.scss */
+#myorders > thead tr th.cel5 {
+  width: 29%; }
+/* line 298, ../scss/print.scss */
+#myorders > thead tr th.cel6 {
+  width: 5%; }
+/* line 306, ../scss/print.scss */
+#myorders > tbody > tr {
+  cursor: pointer; }
+/* line 311, ../scss/print.scss */
+#myorders > tbody tr td {
+  padding: 10px 0 10px 5px; }
+/* line 314, ../scss/print.scss */
+#myorders > tbody tr td.cel4-details {
+  padding-right: 30px; }
+/* line 318, ../scss/print.scss */
+#myorders > tbody tr td.cel5, #myorders > tbody tr td.mark {
+  padding-right: 20px;
+  background-image: url("../images/site/misc/arrow-right-sm.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  text-transform: uppercase; }
+/* line 332, ../scss/print.scss */
+#myorders > tbody tr.open-row:hover, #myorders > tbody tr.open-row:focus, #myorders > tbody tr.open-row:active {
+  background-color: black !important; }
+/* line 336, ../scss/print.scss */
+#myorders > tbody tr.open-row td {
+  background-color: #f9f9f9 !important;
+  color: black !important; }
+/* line 343, ../scss/print.scss */
+#myorders > tbody tr.open-row td.cel1, #myorders > tbody tr.open-row td.cel2, #myorders > tbody tr.open-row td.cel3, #myorders > tbody tr.open-row td.cel4 {
+  background: transparent !important; }
+/* line 347, ../scss/print.scss */
+#myorders > tbody tr.open-row td.details {
+  background: white !important;
+  border-top: none; }
+/* line 352, ../scss/print.scss */
+#myorders > tbody tr.open-row td.cel5, #myorders > tbody tr.open-row td.mark {
+  background-image: url("../images/site/misc/arrow-down-sm.png");
+  color: #00AF43 !important;
+  text-transform: uppercase; }
+/* line 363, ../scss/print.scss */
+#myorders tr td.details {
+  background: white !important;
+  padding-bottom: 20px;
+  cursor: default; }
+/* line 368, ../scss/print.scss */
+#myorders tr td.details .btn {
+  margin-bottom: 7px; }
+/* line 373, ../scss/print.scss */
+#myorders tr td.details .spinner-buttons .btn {
+  margin-bottom: 0 !important; }
+/* line 379, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr {
+  border-bottom: 1px dotted #e7e7e7; }
+/* line 382, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr:last-child {
+  border-bottom: none; }
+/* line 386, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr.border td {
+  border-bottom: 1px solid #dddddd; }
+/* line 392, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td {
+  border-top: none;
+  vertical-align: middle; }
+/* line 396, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel1 {
+  width: 75px;
+  padding: 5px 19px 5px 5px;
+  /*img {
+  					width: 60px;
+  				}*/ }
+/* line 405, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel2 {
+  width: 48%; }
+/* line 411, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel2, #myorders tr td.details .table-order-detail tr td.cel3, #myorders tr td.details .table-order-detail tr td.cel4 {
+  font-size: 13px;
+  text-transform: uppercase; }
+/* line 415, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel2 .name, #myorders tr td.details .table-order-detail tr td.cel3 .name, #myorders tr td.details .table-order-detail tr td.cel4 .name {
+  color: #010101; }
+/* line 417, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel2 .name a, #myorders tr td.details .table-order-detail tr td.cel3 .name a, #myorders tr td.details .table-order-detail tr td.cel4 .name a {
+  color: #010101;
+  text-decoration: none; }
+/* line 423, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel2 .index, #myorders tr td.details .table-order-detail tr td.cel3 .index, #myorders tr td.details .table-order-detail tr td.cel4 .index {
+  color: #848484; }
+/* line 425, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel2 .index a, #myorders tr td.details .table-order-detail tr td.cel3 .index a, #myorders tr td.details .table-order-detail tr td.cel4 .index a {
+  color: #848484;
+  text-decoration: none; }
+/* line 432, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel3 {
+  width: 15%; }
+/* line 436, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 {
+  width: 28%;
+  padding-left: 4px; }
+/* line 121, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .price-box {
+  font-size: 1em; }
+/* line 124, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .price-box span {
+  float: left;
+  font-size: 21px;
+  margin-right: 10px;
+  color: #00af43; }
+/* line 131, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .price-box span small {
+  font-size: 70%; }
+/* line 135, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .price-box span.old-price {
+  font-size: 20px;
+  margin-right: 0;
+  padding-top: 1px;
+  text-decoration: line-through;
+  color: #898989; }
+/* line 143, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .price-box span.special-price {
+  color: #cb0000; }
+/* line 442, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .price-box {
+  text-align: right; }
+/* line 444, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .price-box .price {
+  float: none;
+  line-height: 21px;
+  margin: 0;
+  color: #000; }
+/* line 453, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 {
+  text-align: left; }
+/* line 456, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .pull-left {
+  padding-top: 15px;
+  padding-right: 10px; }
+/* line 461, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .right-col {
+  padding-top: 5px;
+  padding-right: 20px; }
+/* line 466, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td.cel4 .btn {
+  color: black;
+  background-color: #dadada;
+  float: left;
+  margin-left: 0;
+  margin-right: 7px; }
+/* line 475, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td select {
+  width: 325px; }
+/* line 479, ../scss/print.scss */
+#myorders tr td.details .table-order-detail tr td textarea {
+  width: 300px; }
+/* line 486, ../scss/print.scss */
+#myorders tr td.details .table-order-summary {
+  background-color: #f9f9f9 !important; }
+/* line 490, ../scss/print.scss */
+#myorders tr td.details .table-order-summary thead tr th {
+  border-bottom: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #848484;
+  font-weight: normal;
+  padding-top: 13px;
+  padding-left: 5px; }
+/* line 499, ../scss/print.scss */
+#myorders tr td.details .table-order-summary thead tr th.cel1 {
+  width: 11%; }
+/* line 504, ../scss/print.scss */
+#myorders tr td.details .table-order-summary thead tr th.cel2, #myorders tr td.details .table-order-summary thead tr th.cel3 {
+  width: 25%; }
+/* line 508, ../scss/print.scss */
+#myorders tr td.details .table-order-summary thead tr th.cel4 {
+  width: 39%;
+  padding-left: 30px;
+  padding-right: 20px; }
+/* line 519, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td {
+  border-top: none; }
+/* line 522, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td p {
+  font-size: 11px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: normal; }
+/* line 530, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 {
+  padding-left: 30px; }
+/* line 532, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel1 {
+  padding-left: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: normal;
+  vertical-align: bottom; }
+/* line 541, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 {
+  padding-right: 0;
+  text-align: right; }
+/* line 121, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 .price-box {
+  font-size: 1em; }
+/* line 124, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 .price-box span {
+  float: left;
+  font-size: 21px;
+  margin-right: 10px;
+  color: #00af43; }
+/* line 131, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 .price-box span small {
+  font-size: 70%; }
+/* line 135, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 .price-box span.old-price {
+  font-size: 20px;
+  margin-right: 0;
+  padding-top: 1px;
+  text-decoration: line-through;
+  color: #898989; }
+/* line 143, ../scss/partial/mixins/_cropp.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 .price-box span.special-price {
+  color: #cb0000; }
+/* line 547, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 .price-box .price {
+  font-size: 18px;
+  line-height: 16px;
+  color: black;
+  margin-right: 2px;
+  float: none; }
+/* line 555, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2 .price-box .transport-price small {
+  padding-left: 6px; }
+/* line 563, ../scss/print.scss */
+#myorders tr td.details .table-order-summary tbody tr td.cel4 .cel2.summary .price-box .price {
+  font-size: 21px;
+  line-height: 18px;
+  color: #00af43;
+  margin-right: 2px;
+  float: none; }
