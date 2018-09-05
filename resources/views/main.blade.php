@@ -171,7 +171,7 @@
                      </span>
                   </li>
                   <li class="search" id="showSearchForm" style="background-color: #00004d;color: #ffcc00;"></li>
-                  <li class="my-account" id="myAccountButton" style="background-color: #00004d;">
+                  <li class="{{ Auth::check() ? "my-account" : "my-account-loggedout"}}" id="myAccountButton" style="background-color: #00004d;">
                       <a href="{{ route('login') }}"></a>
                   </li>
                   <li class="cart" id="quickCart" style="background-color: #00004d;">
