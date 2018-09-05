@@ -24,7 +24,7 @@ Route::post('auth/logout', 'Auth\LoginController@getLogout')->name('logout');
 //Registration routes
 Route::get('auth/register', 'Auth\RegisterController@getRegister')->name('register');
 
-Route::post('auth/register', 'Auth\RegisterController@postRegister')->name('register-redirect');
+Route::post('auth/register', 'Auth\RegisterController@create')->name('register-redirect');
 //end of registration routes
 
 Route::get('man', 'PagesController@getMan')->name('man');
