@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request; /* Added by Clint. Find a better way to achieve this */
 
 class RegisterController extends Controller
 {
@@ -53,7 +54,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            // 'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -68,9 +69,29 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'gender' => $data['gender'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'dob' => $data['dob'],
+            'phone' => $data['phone'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        /* $model_object_instance = new model; */
+        // $newUser = new User;
+        // /* $model_object_instance ->db_column = $request->name; */
+        // $newUser->gender = $request->gender;
+        // $newUser->first_name = $request->first_name;
+        // $newUser->last_name = $request->last_name;
+        // $newUser->dob = $request->dob;
+        // $newUser->phone = $request->phone;
+        // $newUser->email = $request->email;
+        // $newUser->password = $request->password;
+        //
+        // $newUser->save();
+        //
+        // /*redirecting to the login page*/
+        // return redirect()->route('login');
     }
 }
