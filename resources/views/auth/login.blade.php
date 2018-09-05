@@ -14,7 +14,7 @@
                            <a href="{{ route('home') }}" title="Haus Valeriaa">Home</a>
                         </li>
                         <li class="cms_page">
-                           <span title=""></span>
+                           <span title="">{{ Auth::check() ? "Logged In" : "Logged Out"}}</span>
                         </li>
                         <li class="products-quantity hidden">
                            <span>Number of products:</span>

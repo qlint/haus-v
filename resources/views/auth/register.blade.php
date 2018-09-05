@@ -26,25 +26,25 @@
                         </div>
                         <div class="form-group gender">
                            <label class="control control-radio">
-                              <input type="radio" id="gender" name="gender" value="431">
+                              <input type="radio" id="gender" name="gender" value="female">
                               Female                                  <em>*</em>
                               <div class="control-indicator"></div>
                            </label>
                            <label class="control control-radio">
-                              <input type="radio" id="gender" name="gender" value="429">
+                              <input type="radio" id="gender" name="gender" value="male">
                               Male                                   <em>*</em>
                               <div class="control-indicator"></div>
                            </label>
                         </div>
                         <div class="customer-name">
                            <div class="form-group text-input">
-                              <label for="firstname">
+                              <label for="first_name">
                               First Name<em>*</em>
                               </label>
                               <input type="text" id="firstname" name="first_name" value="" title="first_name" placeholder="first name" maxlength="30">
                            </div>
                            <div class="form-group text-input">
-                              <label for="lastname">
+                              <label for="last_name">
                               Last Name<em>*</em>
                               </label>
                               <input type="text" id="lastname" name="last_name" value="" title="last_name" placeholder="last name" maxlength="30">
@@ -53,79 +53,34 @@
                         <div class="form-group date-input">
                            <label>Date of birth</label>
                            <span class="Zebra_DatePicker_Icon_Wrapper" style="display: block; position: relative; float: none; top: auto; right: auto; bottom: auto; left: auto;">
-                             <input type="text" id="dob" name="dob" data-value="" value="" class="datepicker" readonly="readonly" style="position: relative; top: auto; right: auto; bottom: auto; left: auto;">
+                             <input type="text" id="dob" name="dob" data-value="" value="" class="datepicker" style="position: relative; top: auto; right: auto; bottom: auto; left: auto;">
                              <button type="button" class="Zebra_DatePicker_Icon Zebra_DatePicker_Icon_Inside_Left" style="top: 5px; left: 0px;">Pick a date</button>
                            </span>
                         </div>
                         <div class="phone-no">
                            <div class="form-group text-input">
                               <label>Phone<em>*</em></label>
-                              <input type="text" class="phone-number-prefix" maxlength="4" name="dial_code" value="+254">
-                           </div>
-                           <div class="form-group text-input">
-                              <label>&nbsp;</label>
                               <input type="number" name="phone" id="telephone" value="" title="telephone" class="phone-number" placeholder="Telephone">
-                           </div>
-                        </div>
-                        <div class="form-group toggle-element collapsed">
-                           <label for="addAddress" class="control control-checkbox">
-                              Add address
-                              <input type="checkbox" name="Address" id="addAddress" value="" class="toggle-checkbox">
-                              <div class="control-indicator"></div>
-                           </label>
-                           <div class="content">
-                              <input type="hidden" name="create_address" value="0">
-                              <input type="hidden" name="is_private" value="1">
-                              <input type="hidden" name="default_shipping" value="1">
-                              <input type="hidden" name="country_id" value="PL">
-                              <div class="form-group text-input">
-                                 <label for="street_1" class="required" aria-required="true">Street<em>*</em></label>
-                                 <input type="text" name="street[]" value="" title="Ulica" placeholder="Ulica" id="street_1">
-                              </div>
-                              <div class="form-group text-input">
-                                 <label for="street_2">
-                                 House / flat number<em>*</em>
-                                 </label>
-                                 <input type="text" name="street[]" value="" title="Numer domu/mieszkania" placeholder="Numer domu/mieszkania" id="street_2">
-                              </div>
-                              <div class="form-group text-input">
-                                 <label for="zip">
-                                 Postal Code<em>*</em>
-                                 </label>
-                                 <input type="text" name="postcode" value="" title="Kod pocztowy" placeholder="Kod pocztowy" id="zip">
-                                 <div data-static="postcode_validate_info" class="postcode-validate-info">
-                                 </div>
-                              </div>
-                              <div class="form-group text-input">
-                                 <label for="city" class="required" aria-required="true">
-                                 City<em>*</em>
-                                 </label>
-                                 <input type="text" name="city" value="" title="Miejscowość" placeholder="Miejscowość" id="city">
-                              </div>
                            </div>
                         </div>
                      </div>
                      <div class="form-right">
                         <div class="form-group text-input">
                            <label>An email address that will be your login<em>*</em></label>
-                           <input type="email" name="email_address" id="email_address" value="" title="e-mail address" placeholder="e-mail address">
-                        </div>
-                        <div class="form-group text-input">
-                           <label>Enter the email again<em>*</em></label>
-                           <input type="text" name="email_address_confirm" id="email_address_confirm" value="" title="email_address_confirm" placeholder="Confirm e-mail address">
+                           <input type="email" name="email" id="email_address" value="" title="e-mail address" placeholder="e-mail address">
                         </div>
                         <div class="form-group text-input password-toggle">
                            <label>
                            Password<em>*</em>
                            </label>
-                           <input type="password" name="password" id="password" title="password" placeholder="password">
+                           <input type="password" name="password" id="toggleReveal" title="password" placeholder="password">
                            <span class="show-label">
-                             Show
+                             <input type="checkbox" id="pwdReveal">Show
                            </span>
                         </div>
                         <div class="form-group checkbox-input">
                            <label class="control control-checkbox terms-agreement">
-                              <input type="checkbox" name="terms-agreement" required="" aria-required="true">
+                              <input id="termsConfirm" type="checkbox" name="terms-agreement">
                               *I agree with <a href="{{ route('privacy') }}"> </a>
                               <div class="control-indicator"></div>
                            </label>
@@ -159,7 +114,7 @@
                         </div>
                         <div class="form-group bottom-section">
                            <p class="form-legend">* Required fields</p>
-                           <button class="btn fancy-btn" id="registerButton" type="submit" title="Wyślij">
+                           <button class="btn fancy-btn" id="registerButton" type="submit" title="Register">
                            continue
                            </button>
                         </div>
