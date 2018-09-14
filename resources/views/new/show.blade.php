@@ -65,11 +65,13 @@
                            </a>
                         </div>
                         <div style="margin-top:7px;">
+                          <h2>Second View</h2>
                            <img src="{{ URL::asset($newitem->img1280) }}"
                               alt=""
                               class="image-zoom">
                         </div>
                         <div style="margin-top:7px;">
+                          <h2>Third View</h2>
                            <img src="{{ URL::asset($newitem->img1024) }}"
                               alt=""
                               class="image-zoom">
@@ -124,7 +126,7 @@
                      </div>
                      <h1 class="product-name">{{ $newitem->name }}</h1>
                      <div class="additional-description">
-                        Color: {{ $newitem->color }} <br>Clothing size: {{ $newitem->size }} <br> FREE DELIVERY TO STORES
+                        Color: {{ $newitem->color }} <br>Clothing size: {{ $newitem->size }} <br> FREE DELIVERY
                      </div>
                      <div class="product-options" id="product-options-wrapper">
                         <div id="productColors"></div>
@@ -133,7 +135,7 @@
                                if(!window.getProductAdditionalData) {
                                    window.getProductAdditionalData = function() {
                                        return {
-                                           colors: [{"active":false,"id":"1760455","url":"https:\/\/www.cropp.com\/pl\/pl\/chlopak\/brand-new-arrivals-for-him\/QZ594-99M\/men-s-outer-jacket","sample":"https:\/\/www.cropp.com\/media\/catalog\/product\/cache\/25\/a4e40ebdc3e371adff845072e1c73f37\/Q\/Z\/QZ594-99M-999.jpg","photo":{},"color_name":"czarny","color_css":"BLACK"},{"active":true,"id":"1760465","url":"https:\/\/www.cropp.com\/pl\/pl\/chlopak\/brand-new-arrivals-for-him\/QZ594-59M\/men-s-outer-jacket","sample":"https:\/\/www.cropp.com\/media\/catalog\/product\/cache\/25\/a4e40ebdc3e371adff845072e1c73f37\/Q\/Z\/QZ594-59M-999.jpg","photo":{},"color_name":"granatowy","color_css":"NAVY"},{"active":false,"id":"1760479","url":"https:\/\/www.cropp.com\/pl\/pl\/chlopak\/brand-new-arrivals-for-him\/QZ594-55X\/men-s-outer-jacket","sample":"https:\/\/www.cropp.com\/media\/catalog\/product\/cache\/25\/a4e40ebdc3e371adff845072e1c73f37\/Q\/Z\/QZ594-55X-999.jpg","photo":{},"color_name":"niebieski","color_css":"BLUE"},{"active":false,"id":"1760489","url":"https:\/\/www.cropp.com\/pl\/pl\/chlopak\/brand-new-arrivals-for-him\/QZ594-09M\/men-s-outer-jacket","sample":"https:\/\/www.cropp.com\/media\/catalog\/product\/cache\/25\/a4e40ebdc3e371adff845072e1c73f37\/Q\/Z\/QZ594-09M-999.jpg","photo":{},"color_name":"szary","color_css":"GREY"}]
+                                           colors: [{"active":false,"id":"1760455","url":"https:\/\/www.hausvaleriaa.co.ke","sample":"https:\/\/www.hausvaleriaa.co.ke","photo":{},"color_name":"blue","color_css":"BLUE"},{"active":true,"id":"1760465","url":"https:\/\/www.hausvaleriaa.co.ke","sample":"https:\/\/www.hausvaleriaa.co.ke","photo":{},"color_name":"black","color_css":"BLACK"},{"active":false,"id":"1760479","url":"https:\/\/www.hausvaleriaa.co.ke","sample":"https:\/\/www.hausvaleriaa.co.ke","photo":{},"color_name":"white","color_css":"WHITE"},{"active":false,"id":"1760489","url":"https:\/\/hausvaleriaa.co.ke","sample":"https:\/\/www.hausvaleriaa.co.ke","photo":{},"color_name":"red","color_css":"RED"}]
                                        };
                                    }
                                }
@@ -159,7 +161,7 @@
                      </div>
                      <div class="product-options-bottom">
                         <div class="add-to-cart">
-                           <button type="button" title="Do koszyka"
+                           <button type="button" title="To shopping cart"
                               id="addToCart"
                               class="button btn-cart fancy-btn show-tooltip"
                               disabled="disabled"
@@ -190,7 +192,7 @@
                         </div>
                         <section class="product-share">
                            <ul>
-                              <li><button class="share-print" title="Drukuj" onclick="javascript:window.print(); return false;"></button></li>
+                              <li><button class="share-print" title="Print" onclick="javascript:window.print(); return false;"></button></li>
                               <li>        <button class="share-twitter" title="twitter"
                                  onClick="window.open('//www.twitter.com/','_blank', 'width=700, height=300'); return false;"></button>
                               </li>
@@ -204,7 +206,7 @@
                   </section>
                </form>
                <div class="recommended-products">
-                  <h3 class="title">Recommended</h3>
+                  <h3 class="title">More From This Category</h3>
                   <div>
                      <ul>
                         <li>
@@ -281,56 +283,56 @@
       <div class="customer-care-modal-wrapper">
          <div class="customer-service" data-modal-id="customer-care">
             <button data-remodal-action="close" class="close-button"></button>
-            <h4 class="modal-title">Obsługa klienta</h4>
+            <h4 class="modal-title">Customer service</h4>
             <aside>
-               <h4 class="section-title">Infolinia</h4>
+               <h4 class="section-title">Helpline</h4>
                <div class="helpline-section">
                   <div class="helpline-hours">
-                     PN-PT 9:00-19:00,<BR>SB 10:00-17:00<BR><BR><BR>
+                     MON-FRI 9:00-5:00,<BR>SAT 10:00-5:00<BR><BR><BR>
                   </div>
                   <div class="helpline-phone">
-                     800 802 020
+                     +254 791 370 517
                   </div>
                </div>
                <div class="helpline-section">
                   <div class="helpline-address">
-                     LPP S.A.<BR>ul. Łąkowa 39/44<BR>80-769 Gdańsk<BR>Sąd Rejonowy Gdańsk-Północ w Gdańsku VII Wydział Gospodarczy<BR>Kapitał zakładowy 3 662 246 PLN (zapłacony w całości)<BR>REGON: 190852164
+                     City<BR>Road<BR>Street<BR>Building name opposite Another<BR>Floor and office/ suite<BR>Hannah Vallery
                   </div>
                </div>
             </aside>
             <section>
-               <h4 class="section-title">Skontaktuj się z nami</h4>
-               <form data-action="https://www.cropp.com/pl/pl/contacts/index/post/" id="contactForm" method="post" class="form">
+               <h4 class="section-title">Contact Us</h4>
+               <form data-action="#" id="contactForm" method="post" class="form">
                   <div class="form-group ">
-                     <label class="control-label" for="firstname">Imię*</label>
+                     <label class="control-label" for="firstname">First Name*</label>
                      <div class="input-icon ">
                         <input class="form-control"
                            type="text"
                            maxlength="30"
                            name="firstname"
                            id="firstname"
-                           title="Imię"
-                           placeholder="Imię"
+                           title="First Name"
+                           placeholder="First Name"
                            value=""
-                           data-error="Musisz wpisać swoje imię"
+                           data-error="First name is required"
                            data-valid='{"type":"name"}'
-                           data-helper="Wpisz swoje imię">
+                           data-helper="Please enter your first name">
                      </div>
                   </div>
                   <div class="form-group ">
-                     <label class="control-label" for="lastname">Nazwisko*</label>
+                     <label class="control-label" for="lastname">Last Name*</label>
                      <div class="input-icon ">
                         <input class="form-control"
                            type="text"
                            maxlength="30"
                            name="lastname"
                            id="lastname"
-                           title="Nazwisko"
-                           placeholder="Nazwisko"
+                           title="Last Name"
+                           placeholder="Last Name"
                            value=""
-                           data-error="Musisz wpisać swoje nazwisko"
+                           data-error="Last name is required"
                            data-valid='{"type":"name"}'
-                           data-helper="Wprowadź swoje nazwisko">
+                           data-helper="Please enter your last name">
                      </div>
                   </div>
                   <div class="form-group ">
@@ -343,39 +345,39 @@
                            title="E-Mail"
                            placeholder="E-Mail"
                            value=""
-                           data-error="Musisz wpisać swój email"
+                           data-error="Email is required"
                            data-valid='{"type":"email"}'
-                           data-helper="Wprowadź adres e-mail">
+                           data-helper="Please enter your email">
                      </div>
                   </div>
                   <div class="form-group select-group">
-                     <label class="control-label" for="email">Wybierz dział*</label>
+                     <label class="control-label" for="email">Choose Department*</label>
                      <div class="select">
                         <select name="departaments">
-                           <option selected="selected" disabled value="0">Wybierz dział</option>
+                           <option selected="selected" disabled value="0">Choose Department</option>
                         </select>
                         <div class="select-arrow"></div>
                      </div>
                   </div>
                   <div class="form-group select-group">
-                     <label class="control-label" for="email">Wybierz temat*</label>
+                     <label class="control-label" for="email">Choose A Topic*</label>
                      <div class="select">
                         <select name="subjects"></select>
                         <div class="select-arrow"></div>
                      </div>
                   </div>
                   <div class="form-group textarea-group">
-                     <label class="control-label">Komentarz*</label>
+                     <label class="control-label">Message*</label>
                      <textarea class="form-control"
                         name="comment"
-                        title="Komentarz"
+                        title="Message"
                         cols="5" rows="3"
                         data-valid='{"type":"text", "required": 1}'
-                        data-error="Musisz wpisać swoją wiadomość"
-                        data-helper="Wpisz wiadomość"></textarea>
+                        data-error="You must enter your message"
+                        data-helper="Enter the message"></textarea>
                   </div>
                   <div class="form-group required-fields-info">
-                     <h5>* Pola Wymagane</h5>
+                     <h5>* Required fields</h5>
                   </div>
                   <div class="form-group checkbox-list checkbox-agree">
                      <label class="control control-checkbox">
@@ -394,7 +396,7 @@
             (function() {
                 if(!window.getDepartaments) {
                     window.getDepartaments = function() {
-                        return {"185":{"label":"Sklep ONLINE","topics":{"0":"Wybierz temat","1":"Uwagi dotyczące strony Sklepu Online","3":"Zwroty lub reklamacje","5":"Zamówienia","7":"Pomoc przy zakupach","9":"Informacje dotyczące artykułów"}},"187":{"label":"Sklepy stacjonarne - Obsługa Klienta","topics":{"0":"Wybierz temat","11":"Obsługa w salonach Cropp"}}};
+                        return {"185":{"label":"Haus Valeriaa","topics":{"0":"Choose A Topic","1":"Comments about the Online Store page","3":"Returns or complaints","5":"Orders","7":"Help with shopping","9":"Information on articles"}},"187":{"label":"Stationary stores - Customer service","topics":{"0":"Choose A Topic","11":"Service in Haus Valeriaa stores"}}};
                     }
                 }
             })();
