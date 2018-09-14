@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Newitem;
+use App\Category;
 
 class NewitemController extends Controller
 {
@@ -14,7 +15,10 @@ class NewitemController extends Controller
      */
     public function index()
     {
-        //
+        //since the items may be too many as the site grows, we may need pagination
+        $newitem = Newitem::orderBy('id','desc')->paginate(15);
+        // Since this is the index, we may as well display all item. Needs refinement.
+        return view('new.index')->with('newitem', $newitem);
     }
 
     /**
@@ -24,8 +28,10 @@ class NewitemController extends Controller
      */
     public function create()
     {
+      //we want to assign the item being created to a category (from Category model)
+      $categories = Category::all();
       /* views > new > create */
-      return view('new.create');
+      return view('new.create')->withCategories($categories);
     }
 
     /**
