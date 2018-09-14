@@ -15,6 +15,7 @@ class Category extends Model
     //I'll call my function "items"
     public function items(){
       //we're connecting it to the newitem model
+      //note one to may uses 'hasMany'. One to one uses 'hasOne'
       return $this->hasMany('App\Newitem');
     }
 }
