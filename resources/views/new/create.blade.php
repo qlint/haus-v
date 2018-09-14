@@ -92,7 +92,10 @@
                   <label class="control-label" for="email">Item Type (category)*</label>
                   <div class="select">
                      <select name="category">
-                        <option>Suit</option>
+                       @foreach($categories as $category)
+                         <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                       @endforeach
+                        {{-- <option>Suit</option>
                         <option>Blouse</option>
                         <option>Shirt</option>
                         <option>T-Shirt</option>
@@ -103,7 +106,7 @@
                         <option>Jeans</option>
                         <option>Short</option>
                         <option>Hat</option>
-                        <option>Shoes</option>
+                        <option>Shoes</option> --}}
                      </select>
                      <div class="select-arrow"></div>
                   </div>
