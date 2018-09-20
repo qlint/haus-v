@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Setting;
+use App\Category;
 
 class SettingController extends Controller
 {
@@ -12,9 +13,11 @@ class SettingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        //
+      $categories = Category::all();
+      return view('settings.create')->withCategories($categories);
     }
 
     /**
@@ -24,7 +27,8 @@ class SettingController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('settings.create')->withCategories($categories);
     }
 
     /**
@@ -38,24 +42,26 @@ class SettingController extends Controller
         //
         $setting = new Setting;
         /* $model_object_instance ->db_column = $request->name; */
-        $newitem->company_logo = $request->file('companyLogo')->move('img/company');
-        $setting->company_name = $request->companyName;
-        $setting->city = $request->locationCity;
-        $setting->country = $request->locationCountry;
-        $setting->street = $request->locationStreet;
+        /*$newitem->company_logo = $request->file('company_logo')->move('img/company');*/
+        $setting->company_name = $request->company_name;
+        $setting->city = $request->city;
+        $setting->country = $request->country;
+        $setting->street = $request->street;
         $setting->telephone = $request->telephone;
-        $setting->telephone_2 = $request->telephone2;
-        $setting->weekday_hours = $request->weekdayHours;
-        $setting->weekend_hours = $request->weekendHours;
-        $setting->facebook = $request->companyFacebook;
-        $setting->instagram = $request->companyInstagram;
-        $setting->twitter = $request->companyTwitter;
-        $setting->youtube = $request->companyYoutube;
+        $setting->telephone_2 = $request->telephone_2;
+        $setting->weekday_hours = $request->weekday_hours;
+        $setting->weekend_hours = $request->weekend_hours;
+        $setting->facebook = $request->facebook;
+        $setting->instagram = $request->instagram;
+        $setting->twitter = $request->twitter;
+        $setting->youtube = $request->youtube;
 
         $setting->save();
 
         /*redirecting to the content's particular page*/
-        return redirect()->route('settings.show', $setting->id);
+        /*return redirect()->route('settings.show', $setting->id);*/
+        $categories = Category::all();
+        return view('settings.create')->withCategories($categories);
     }
 
     /**
