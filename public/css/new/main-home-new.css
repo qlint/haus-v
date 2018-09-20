@@ -1,0 +1,31 @@
+.mobile-video-header {
+  visibility: hidden; }
+
+.main-site-cropp .row .box-md {
+  box-sizing: border-box;
+  background-color: #f9f8f5; }
+
+@media screen and (min-width: 992px) {
+  .main-site-cropp .row .box-md {
+    height: 390px;
+    margin-top: 2%; } }
+
+@media screen and (max-width: 991px) {
+  .main-site-cropp .row .box-md {
+    height: 250px;
+    margin-top: 2%; } }
+
+@media screen and (max-width: 767px) {
+  .main-site-cropp .row .box-md {
+    height: 460px;
+    margin: 2% 16%; } }
+
+@media screen and (max-width: 620px) {
+  .main-site-cropp .row .box-md {
+    height: 330px;
+    margin: 2% 16%; } }
+
+@media screen and (max-width: 440px) {
+  .main-site-cropp .row .box-md {
+    height: 290px;
+    margin: 2%; } }
