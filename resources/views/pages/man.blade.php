@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="wrapper">
-        
+
         <div class="main-container">
             <div class="header-controls" id="headerControls">
     			<span class="controls-container">
@@ -21,14 +21,14 @@
                                 <a href="#" title="">COLLECTION</a>
                             </li>
                             <li class="category2695">
-                                <span title="JACKETS, VESTS">JACKETS, COATS</span>
+                                <span title="Collections in all categories">ALL</span>
                             </li>
             			</ul>
         			</div>
             	</span>
 			</div>
 			<div class="page-title category-title">
-        		<h1>JACKETS, COATS</h1>
+        		<h1>TREND</h1>
 			</div>
 
 			<div id="banner-category-2695-cc151" class="category-banner hidden">
@@ -39,11 +39,36 @@
             <!-- Products -->
             <div id="products" class="products-grid clearfix">
                <div class="products-grid clearfix">
-                  <div class="item">
+                 @foreach($newitems as $item)
+                   <div class="item">
+                      <div class="inner">
+                         <div class="product-content product-active">
+                            <div class="product-presentation">
+                               <div class="product-image" style="background-color:#000000;">
+                                 <img class="img-responsive" style="display: block;max-width: 100%;height: auto;margin-top:45px;margin-bottom:45px;" data-image-front="{{ $item->img1920 }}" data-image-back="{{ $item->img1280 }}" alt="{{ $item->description }}" src="{{ $item->img1024 }}">
+                               </div>
+                               <a href="/new/{{ $item->id }}" class="product-link"></a>
+                            </div>
+                            <div class="product-caption">
+                               <h3>{{ $item->name }}</h3>
+                               <div class="price-box">
+                                  <span class="price">
+                                     {{ $item->price }} KES
+                                  </span>
+                               </div>
+                            </div>
+                            <button class="fancy-btn btn-open-quickshop"></button>
+                         </div>
+                      </div>
+                   </div>
+  							 @endforeach
+                  {{-- <div class="item">
                      <div class="inner">
                         <div class="product-content product-active">
                            <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
+                              <div class="product-image">
+                                <img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}">
+                              </div>
                               <a href="#" class="product-link"></a>
                            </div>
                            <div class="product-caption">
@@ -57,272 +82,8 @@
                            <button class="fancy-btn btn-open-quickshop"></button>
                         </div>
                      </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Two</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    8,000 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1757119"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Three</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    10,500 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1760593"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Four</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    9,700 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1763347"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Five</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    12,100 KES
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1755219"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Six</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    10,700 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1764679"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>product Seven</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    7,200 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1705777"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Eight</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    8,300 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1705881"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Nine</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    11,400 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1762615"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Ten</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    5,000 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1760547"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Eleven</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    6,250 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1705893"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Twelve</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    4,500 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1692101"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Thirteen</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    7,100 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1755233"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Fourteen</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    8,750 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1762619"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="inner">
-                        <div class="product-content product-active">
-                           <div class="product-presentation">
-                              <div class="product-image"><img data-image-front="{{ URL::asset('img/2pc.png') }}" data-image-back="{{ URL::asset('img/3pc.png') }}" alt="" src="{{ URL::asset('img/2pc.png') }}"></div>
-                              <a href="#" class="product-link"></a>
-                           </div>
-                           <div class="product-caption">
-                              <h3>Product Fifteen</h3>
-                              <div class="price-box">
-                                 <span class="price">
-                                    9,900 KES
-                                 </span>
-                              </div>
-                           </div>
-                           <button class="fancy-btn btn-open-quickshop" data-action="QuickShop" data-pid="1692123"></button>
-                        </div>
-                     </div>
-                  </div>
+                  </div> --}}
+
                </div>
             </div>
             <!-- End of Products -->
