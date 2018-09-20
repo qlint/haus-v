@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Newitem;
+use App\Category;
 
 class PagesController extends Controller {
 
@@ -9,15 +11,21 @@ class PagesController extends Controller {
 	}
 
 	public function getMan(){
-		return view('pages.man');
+		$categories = Category::all();
+		$newitems = Newitem::all()->where('target', 'Man')/*->orWhere('target', 'Unisex')*/;
+		return view('pages.man')->withCategories($categories)->withNewitems($newitems);
 	}
 
 	public function getWoman(){
-		return view('pages.woman');
+		$categories = Category::all();
+		$newitems = Newitem::all()->where('target', 'Woman')/*->orWhere('target', 'Unisex')*/;
+		return view('pages.woman')->withCategories($categories)->withNewitems($newitems);
 	}
 
 	public function getKids(){
-		return view('pages.kids');
+		$categories = Category::all();
+		$newitems = Newitem::all()->where('target', 'Kids');
+		return view('pages.kids')->withCategories($categories)->withNewitems($newitems);
 	}
 
 	public function getShop(){
