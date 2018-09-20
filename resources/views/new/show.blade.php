@@ -206,7 +206,7 @@
                   </section>
                </form>
                <div class="recommended-products">
-                  <h3 class="title">More From This Category</h3>
+                  <h3 class="title">More From {{ $newitem->category }}s</h3>
                   <div>
                      <ul>
                         <li>
