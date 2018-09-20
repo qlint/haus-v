@@ -4,16 +4,9 @@
 					<li><a href="#">COLLECTION</a></li>
 					<li class="active">
 					   <ul class="level-2 open">
-					      <li class="active"><a href="#" class="active">JACKETS, COATS</a></li>
-					      <li><a href="#" >SHIRTS</a></li>
-					      <li><a href="#" >T-SHIRTs</a></li>
-					      <li><a href="#" >TROUSERS</a></li>
-					      <li><a href="#" >JEANS</a></li>
-					      <li><a href="#" >SWEATERS</a></li>
-					      <li><a href="#" >COLD SEASON ACCESSORIES</a></li>
-					      <li><a href="#" >BELTS</a></li>
-					      <li><a href="#" >UNDERGARMENTS</a></li>
-					      <li><a href="#" >ACCESSORIES</a></li>
+							 @foreach($categories as $category)
+								 <li><a href="#" >{{ $category->category_name }}</a></li>
+							 @endforeach
 					   </ul>
 					</li>
 					<li>
