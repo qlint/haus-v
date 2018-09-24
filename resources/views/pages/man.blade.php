@@ -45,7 +45,7 @@
                          <div class="product-content product-active">
                             <div class="product-presentation">
                                <div class="product-image" style="background-color:#000000;">
-                                 <img class="img-responsive" style="display: block;max-width: 100%;height: auto;margin-top:45px;margin-bottom:45px;" data-image-front="{{ $item->img1920 }}" data-image-back="{{ $item->img1280 }}" alt="{{ $item->description }}" src="{{ $item->img1024 }}">
+                                 <img class="img-responsive" style="" data-image-front="{{ $item->img1920 }}" data-image-back="{{ $item->img1280 }}" alt="{{ $item->description }}" src="{{ $item->img1024 }}">
                                </div>
                                <a href="/new/{{ $item->id }}" class="product-link"></a>
                             </div>
