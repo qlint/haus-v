@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Newitem;
 use App\Category;
+use App\Setting;
 
 class PagesController extends Controller {
 
@@ -33,10 +34,12 @@ class PagesController extends Controller {
 	}
 
 	public function getPrivacy(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.privacy');
 	}
 
 	public function getFaq(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.faq');
 	}
 
@@ -45,26 +48,32 @@ class PagesController extends Controller {
 	}
 
 	public function getFormsofpayment(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.formsofpayment');
 	}
 
 	public function getShippingcostdelivery(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.shippingcostdelivery');
 	}
 
 	public function getReturnandexchange(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.returnandexchange');
 	}
 
 	public function getComplaints(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.complaints');
 	}
 
 	public function getFullprivacypolicy(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.fullprivacypolicy');
 	}
 
 	public function getContacts(){
+		$setting = Setting::all()->first();
 		return view('pages.quicklinks.contacts');
 	}
 
