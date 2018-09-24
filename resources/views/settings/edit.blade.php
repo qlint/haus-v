@@ -3,6 +3,9 @@
 @section('class','contacts-index-index')
 @section('content')
 
+<form id="contactForm" method="POST" action="{{ route('settings.update', $setting->id) }}" data-parsley-validate enctype="multipart/form-data" class="form">
+     {{ csrf_field() }}
+     {{ method_field('PUT') }}
 <div class="wrapper">
    <div class="main-container col1-layout">
       <div class="header-controls" id="headerControls">
@@ -13,20 +16,19 @@
          <button data-remodal-action="close" class="close-button"></button>
          <h4 class="modal-title">Customer service</h4>
          <aside>
-           <form id="contactForm" method="POST" action="{{ route('settings.store') }}" data-parsley-validate enctype="multipart/form-data" class="form">
-              {{ csrf_field() }}
+
               <h4 class="section-title">Work Hours</h4>
               <div class="helpline-section">
                  <div class="helpline-hours">
                    <label class="control-label" for="weekday_hours">Weekday Hours</label>
                    <input class="form-control" type="text" maxlength="30" name="weekday_hours" width="50"
-                      id="weekday_hours" title="Weekday Hours" placeholder="9:00-5:00" value=""
+                      id="weekday_hours" title="Weekday Hours" placeholder="9:00-5:00" value="{{ $setting->weekday_hours }}"
                       data-error="Please enter the weekday hours" data-valid='{"type":"name"}'
                       data-helper="Enter the weekday hours">
                     <BR><BR>
                     <label class="control-label" for="weekend_hours">Weekend Hours</label>
                     <input class="form-control" type="text" maxlength="30" name="weekend_hours" width="50"
-                         id="weekend_hours" title="Weekend Hours" placeholder="10:00-1:00" value=""
+                         id="weekend_hours" title="Weekend Hours" placeholder="10:00-1:00" value="{{ $setting->weekend_hours }}"
                          data-error="Please enter the weekend hours" data-valid='{"type":"name"}'
                          data-helper="Enter the weekend hours">
                     <BR>
@@ -37,13 +39,13 @@
                  <div class="helpline-hours">
                    <label class="control-label" for="telephone">Telephone 1</label>
                    <input class="form-control" type="number" maxlength="12" name="telephone" width="50"
-                      id="telephone" title="Telephone 1" placeholder="07XXXXXXXX" value="" pattern="[0-9]{12}"
+                      id="telephone" title="Telephone 1" placeholder="07XXXXXXXX" value="{{ $setting->telephone }}" pattern="[0-9]{12}"
                       data-error="Please enter the telephone" data-valid='{"type":"name"}'
                       data-helper="Enter the telephone">
                     <BR><BR>
                     <label class="control-label" for="telephone_2">Telephone 2</label>
                     <input class="form-control" type="number" maxlength="12" name="telephone_2" width="50"
-                         id="telephone_2" title="Telephone 2" placeholder="07XXXXXXXX" value="" pattern="[0-9]{12}"
+                         id="telephone_2" title="Telephone 2" placeholder="07XXXXXXXX" value="{{ $setting->telephone_2 }}" pattern="[0-9]{12}"
                          data-error="Please enter the telephone" data-valid='{"type":"name"}'
                          data-helper="Enter the telephone">
                     <BR>
@@ -54,19 +56,19 @@
                  <div class="helpline-hours">
                    <label class="control-label" for="street">Location</label>
                    <input class="form-control" type="text" maxlength="15" name="street" width="50"
-                         id="street" title="Location" placeholder="Area X" value=""
+                         id="street" title="Location" placeholder="Area X" value="{{ $setting->street }}"
                          data-error="Please enter the location" data-valid='{"type":"name"}'
                          data-helper="Enter the location">
                    <BR><BR>
                    <label class="control-label" for="city">Road/ Street</label>
                    <input class="form-control" type="text" maxlength="15" name="city" width="50"
-                         id="city" title="Road/ Street" placeholder="Y Street Off Z rd." value=""
+                         id="city" title="Road/ Street" placeholder="Y Street Off Z rd." value="{{ $setting->city }}"
                          data-error="Please enter the road or street" data-valid='{"type":"name"}'
                          data-helper="Enter the road or street">
                    <BR><BR>
                    <label class="control-label" for="country">Building</label>
                    <input class="form-control" type="text" maxlength="15" name="country" width="50"
-                              id="country" title="Building" placeholder="Building Name" value=""
+                              id="country" title="Building" placeholder="Building Name" value="{{ $setting->country }}"
                               data-error="Please enter the building" data-valid='{"type":"name"}'
                               data-helper="Enter the building">
                     <BR>
@@ -80,12 +82,10 @@
               <div class="form-group action-buttons">
                  <button name="submit" class="btn fancy-btn" type="submit">Save</button>
               </div>
-            </form>
+
          </aside>
          <section>
             <h4 class="section-title">General Settings</h4>
-            <form id="contactForm" method="POST" action="{{ route('settings.store') }}" data-parsley-validate enctype="multipart/form-data" class="form">
-               {{ csrf_field() }}
 
                <div class="form-group ">
                   <label class="control-label" for="company_name">Company Name*</label>
@@ -97,7 +97,7 @@
                            id="company_name"
                            title="Company Name"
                            placeholder="Company Name"
-                           value="">
+                           value="{{ $setting->company_name }}">
                   </div>
                </div>
                <div class="form-group ">
@@ -110,7 +110,7 @@
                            id="facebook"
                            title="Facebook Link"
                            placeholder="Facebook Link"
-                           value="">
+                           value="{{ $setting->facebook }}">
                   </div>
                </div>
                <div class="form-group select-group">
@@ -123,7 +123,7 @@
                            id="instagram"
                            title="Instagram Link"
                            placeholder="Instagram Link"
-                           value="">
+                           value="{{ $setting->instagram }}">
                   </div>
                </div>
                <div class="form-group select-group">
@@ -136,7 +136,7 @@
                            id="twitter"
                            title="Twitter Link"
                            placeholder="Twitter Link"
-                           value="">
+                           value="{{ $setting->twitter }}">
                   </div>
                </div>
                <div class="form-group select-group">
@@ -149,7 +149,7 @@
                            id="youtube"
                            title="Youtube Link"
                            placeholder="Youtube Link"
-                           value="">
+                           value="{{ $setting->youtube }}">
                   </div>
                </div>
                <div class="form-group required-fields-info">
@@ -158,7 +158,6 @@
                <div class="form-group action-buttons">
                   <button name="submit" class="btn fancy-btn" type="submit">Save Settings</button>
                </div>
-            </form>
 
             {{-- <h4 class="section-title">Categories</h4>
             <form id="contactForm" method="POST" action="{{ route('settings.store') }}" data-parsley-validate enctype="multipart/form-data" class="form">
@@ -193,6 +192,7 @@
       </script>
    </div>
 </div>
+</form>
 <div class="customer-care-modal-wrapper">
    <div class="customer-service" data-modal-id="customer-care">
       <button data-remodal-action="close" class="close-button"></button>
